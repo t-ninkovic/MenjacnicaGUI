@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 
 public class GUIKontroler {
 	private static MenjacnicaGUI menjacnica;
+	private static DodajKursGUI dodajKurs;
 
 
 	public static void main(String[] args) {
@@ -76,6 +77,11 @@ public class GUIKontroler {
 	public static void prikaziInfoOAutoru() {
 		JOptionPane.showMessageDialog(menjacnica, "Autor: Tijana Ninkovic\nE-mail: tijana.ninkovic6@gmail.com",
 				"O autoru", JOptionPane.INFORMATION_MESSAGE);
+
+	}
+	
+	public static void dodajKurs(String str) {
+		menjacnica.dodajKurs2(str);
 
 	}
 }

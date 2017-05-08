@@ -36,9 +36,8 @@ import java.awt.event.ActionEvent;
 
 public class MenjacnicaGUI extends JFrame {
 
-	/**
-	 * 
-	 */
+	DodajKursGUI dodajKurs;
+	
 	private static final long serialVersionUID = -8678529010427450890L;
 	private JPanel contentPane;
 	private JMenuBar menuBar;
@@ -190,6 +189,14 @@ public class MenjacnicaGUI extends JFrame {
 	private JButton getBtnDodajKurs() {
 		if (btnDodajKurs == null) {
 			btnDodajKurs = new JButton("Dodaj kurs");
+
+			btnDodajKurs.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					dodajKurs = new DodajKursGUI();
+					dodajKurs.setVisible(true);
+				}
+			});
+
 			btnDodajKurs.setFont(new Font("Tahoma", Font.BOLD, 11));
 			btnDodajKurs.setMinimumSize(new Dimension(99, 23));
 			btnDodajKurs.setMaximumSize(new Dimension(120, 23));
@@ -309,6 +316,14 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmDodajKurs() {
 		if (mntmDodajKurs == null) {
 			mntmDodajKurs = new JMenuItem("Dodaj kurs");
+
+			mntmDodajKurs.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					dodajKurs = new DodajKursGUI();
+					dodajKurs.setVisible(true);
+				}
+			});
+
 		}
 		return mntmDodajKurs;
 	}
@@ -323,5 +338,10 @@ public class MenjacnicaGUI extends JFrame {
 			mntmIzvrsiZamenu = new JMenuItem("Izvrsi zamenu");
 		}
 		return mntmIzvrsiZamenu;
+	}
+	
+	public void dodajKurs2(String str) {
+		textArea.append(str + "\n");
+
 	}
 }
