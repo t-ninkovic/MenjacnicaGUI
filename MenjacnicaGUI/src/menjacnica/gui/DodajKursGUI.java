@@ -9,6 +9,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Toolkit;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -41,6 +43,8 @@ public class DodajKursGUI extends JFrame {
 	 */
 	public DodajKursGUI() {
 		setResizable(false);
+		setIconImage(Toolkit.getDefaultToolkit()
+				.getImage(MenjacnicaGUI.class.getResource("/money.png")));
 		setTitle("Dodaj kurs");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 340, 285);

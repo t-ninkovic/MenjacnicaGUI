@@ -9,6 +9,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Toolkit;
+
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.ButtonGroup;
@@ -49,6 +51,8 @@ public class IzvrsiZamenuGUI extends JFrame {
 	 */
 	public IzvrsiZamenuGUI() {
 		setResizable(false);
+		setIconImage(Toolkit.getDefaultToolkit()
+				.getImage(MenjacnicaGUI.class.getResource("/money.png")));
 		setTitle("Izvrsi zamenu");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 389, 286);

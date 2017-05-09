@@ -10,6 +10,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Dimension;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Toolkit;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -52,6 +54,8 @@ public class ObrisiKursGUI extends JFrame {
 		 		setMinimumSize(new Dimension(61, 23));
 		 		setPreferredSize(new Dimension(61, 23));
 		 		setResizable(false);
+		 		setIconImage(Toolkit.getDefaultToolkit()
+						.getImage(MenjacnicaGUI.class.getResource("/money.png")));
 		 		setTitle("Obrisi kurs");
 		 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		 		setBounds(100, 100, 340, 296);
