@@ -32,6 +32,9 @@ public class DodajKursGUI extends JFrame {
 	private JLabel lblSkraceniNaziv;
 	private JButton btnDodaj;
 	private JButton btnOdustani;
+	
+
+	
 
 	/**
 	 * Create the frame.
