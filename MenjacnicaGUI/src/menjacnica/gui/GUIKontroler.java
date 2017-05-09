@@ -89,4 +89,9 @@ public class GUIKontroler {
 		menjacnica.ispisIzbrisKursa2(str);
 
 	}
+	
+	public static void ispisZamene(String str) {
+		menjacnica.ispisZamene2(str);
+
+	}
 }

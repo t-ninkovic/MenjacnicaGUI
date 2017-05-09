@@ -38,6 +38,7 @@ public class MenjacnicaGUI extends JFrame {
 
 	DodajKursGUI dodajKurs;
 	ObrisiKursGUI obrisiKurs;
+	IzvrsiZamenuGUI izvrsiZamenu;
 	
 	private static final long serialVersionUID = -8678529010427450890L;
 	private JPanel contentPane;
@@ -228,6 +229,14 @@ public class MenjacnicaGUI extends JFrame {
 	private JButton getBtnIzvrsiZamenu() {
 		if (btnIzvrsiZamenu == null) {
 			btnIzvrsiZamenu = new JButton("Izvrsi zamenu");
+
+			btnIzvrsiZamenu.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					izvrsiZamenu = new IzvrsiZamenuGUI();
+					izvrsiZamenu.setVisible(true);
+				}
+			});
+
 			btnIzvrsiZamenu.setFont(new Font("Tahoma", Font.BOLD, 11));
 		}
 		return btnIzvrsiZamenu;
@@ -353,6 +362,14 @@ public class MenjacnicaGUI extends JFrame {
 	private JMenuItem getMntmIzvrsiZamenu() {
 		if (mntmIzvrsiZamenu == null) {
 			mntmIzvrsiZamenu = new JMenuItem("Izvrsi zamenu");
+			
+			mntmIzvrsiZamenu.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					izvrsiZamenu = new IzvrsiZamenuGUI();
+					izvrsiZamenu.setVisible(true);
+				}
+			});
+
 		}
 		return mntmIzvrsiZamenu;
 	}
@@ -365,5 +382,10 @@ public class MenjacnicaGUI extends JFrame {
 	
 	public void ispisIzbrisKursa2(String str) {
 		textArea.append(str + "\n");
+	}
+
+	public void ispisZamene2(String str) {
+		textArea.append(str + "\n");
+
 	}
 }
