@@ -118,8 +118,10 @@ public class MenjacnicaGUI extends JFrame {
 			mntmOpen.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					String f = GUIKontroler.izaberiFajl();
-					String s = "Ucitan fajl: " + f;
-					textArea.append(s + "\n");
+					if (f != null) {
+						String s = "Ucitan fajl: " + f;
+						textArea.append(s + "\n");
+					}
 				}
 			});
 
@@ -137,8 +139,10 @@ public class MenjacnicaGUI extends JFrame {
 			mntmSave.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					String f = GUIKontroler.ucitajFajl();
-					String s = "Sacuvan fajl: " + f;
-					textArea.append(s + "\n");
+					if (f != null) {
+						String s = "Sacuvan fajl: " + f;
+						textArea.append(s + "\n");
+					}
 				}
 			});
 

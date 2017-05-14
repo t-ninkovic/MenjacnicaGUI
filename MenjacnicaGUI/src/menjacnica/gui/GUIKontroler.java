@@ -42,7 +42,7 @@ public class GUIKontroler {
 			if (odgovor == JFileChooser.APPROVE_OPTION) {
 				File file = fc.getSelectedFile();
 				f = file.getAbsolutePath();
-			}
+			} else return null;
 		} catch (Exception ex) {
 			JOptionPane.showMessageDialog(menjacnica, ex.getMessage(), "Greska!", JOptionPane.ERROR_MESSAGE);
 		}
@@ -59,7 +59,7 @@ public class GUIKontroler {
 			if (f == JFileChooser.APPROVE_OPTION) {
 				File file = jf.getSelectedFile();
 				s = file.getAbsolutePath();
-			}
+			} else return null;
 		} catch (Exception ex) {
 			JOptionPane.showMessageDialog(menjacnica, ex.getMessage(), "Greska!", JOptionPane.ERROR_MESSAGE);
 		}
